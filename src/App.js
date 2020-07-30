@@ -1,16 +1,20 @@
-import React from 'react';
-import { Admin, Resource } from 'react-admin';
-import jsonServerProvider from 'ra-data-json-server'
-import { CreatePessoa, EditPessoa, ListPessoa } from './pages/index';
+import React, { Component } from 'react';
+import { Admin, Resource, ListGuesser } from 'react-admin';
+import ClientesLista from './Components/clienteslista';
 
 
-const dataProvider = jsonServerProvider ("http://localhost:3000");
 
-const App = () => (
-  <Admin dataProvider={dataProvider}>
-  <Resource name ="pessoa" edit={EditPessoa} list ={ListPessoa} create ={CreatePessoa}/>
-  </Admin>
 
-)
+class App extends Component {
+  render (){
+    return (
+      <div classname="App">
+        <header></header>
+        <ClientesLista/>
+        <Admin></Admin>
+      </div>
+    )
+  }
+}
 
 export default App;

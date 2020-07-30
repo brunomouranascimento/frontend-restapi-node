@@ -12,6 +12,14 @@
     {
       "id": 1,
       "nome": "debito"
+    },
+    {
+      "id": "2",
+      "nome": "matt"
+    },
+    {
+      "id": "3",
+      "nome": "credito"
     }
   ],
   "pessoa": [

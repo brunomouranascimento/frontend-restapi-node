@@ -1,11 +1,14 @@
 import React from 'react';
 import {Create, Edit, List, Datagrid, TextField, TextInput, SimpleForm} from 'react-admin';
 
-export const ListPessoa = props => (
+export const ListCliente = props => (
     <List {...props}>
-    <Datagrid>
+    <Datagrid rowClick ="edit">
         <TextField source="id"/>
         <TextField source="nome"/>
+        <TextField source="endereço"/>
+        <TextField source="telefone"/>
+        <TextField source="telefone2"/>
     </Datagrid>
 </List>
 )

@@ -1,0 +1,27 @@
+{
+  "lancamentos": [
+    {
+      "id": 1,
+      "titulo": "academia",
+      "descricao": "pagamento academia",
+      "pesssoaID": 1,
+      "tipoId": 1
+    }
+  ],
+  "tipo": [
+    {
+      "id": 1,
+      "nome": "debito"
+    }
+  ],
+  "pessoa": [
+    {
+      "id": 1,
+      "nome": "academia bairro"
+    },
+    {
+      "nome": "matheus",
+      "id": 2
+    }
+  ]
+}

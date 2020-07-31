@@ -1,25 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import * as React from "react";
+import { List, Datagrid, TextField } from 'react-admin';
 
-export default function ClientesLista() {
-  const [clientes, setClientes] = useState([]);
-
-  useEffect(() => {
-    const getClientes = () => {
-      axios.get('http://localhost:3000/clientes').then(res => {
-        console.log(res);
-        setClientes(res.data);
-      });
-    };
-
-    getClientes();
-  }, []);
-
-  return (
-    <ul>
-      {clientes.map(cliente => (
-        <li>{cliente.nome}</li>
-      ))}
-    </ul>
-  );
-}
+export const ClientesLista = (props) => (
+    <List {...props}>
+        <Datagrid>
+            <TextField source="id" />
+            <TextField source="nome" />
+            <TextField source="endereco" />
+            <TextField source="telefone" />
+            <TextField source="telefone2" />
+        </Datagrid>
+    </List>
+);

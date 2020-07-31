@@ -1,20 +1,13 @@
-import React, { Component } from 'react';
-// import { Admin } from 'react-admin';
-import ClientesLista from './Components/ClientesLista'
+import React from 'react';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header></header>
-        <ClientesLista />
+import { ClientesLista } from './Components/ClientesLista'
+import simpleRestProvider from 'ra-data-simple-rest';
+import { Admin, Resource } from 'react-admin';
 
-        {/* Esse componente Admin precisa de uma prop chamada dataProvider */}
-        {/* <Admin></Admin> */}
-        
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Admin dataProvider={simpleRestProvider('http://localhost:3000')}>
+      <Resource name="clientes" list={ClientesLista} />
+  </Admin>
+);
 
 export default App;

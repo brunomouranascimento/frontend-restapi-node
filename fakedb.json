@@ -1,0 +1,29 @@
+{
+  "clientes": [{
+      "id": 1,
+      "nome": "matheus",
+      "endereco": "estrada do encanamento, 1916, casa 2",
+      "telefone": "998406882",
+      "telefone2": "35551831"
+    }, {
+      "id": 4,
+      "nome": "brenda",
+      "endereco": "rua do danon, danon",
+      "telefone": "666666",
+      "telefone2": "555555"
+    }, {
+      "id": 3,
+      "nome": "mauricio",
+      "endereco": "rua general azeredo, 218, loja c",
+      "telefone": "9999999",
+      "telefone2": "8888888"
+    }, {
+      "id": 5,
+      "nome": "adriano",
+      "endereco": "rua general azeredo",
+      "telefone": "000000",
+      "telefone2": "5555555"
+    }
+
+  ]
+}

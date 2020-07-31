@@ -1,26 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
+export default function ClientesLista() {
+  const [clientes, setClientes] = useState([]);
 
-
-
-export default class ClientesLista extends React.component {
-    state = {
-        cliente: [],
+  useEffect(() => {
+    const getClientes = () => {
+      axios.get('http://localhost:3000/clientes').then(res => {
+        console.log(res);
+        setClientes(res.data);
+      });
     };
 
-componentDidMount(){
-    axios.get(`http:localhost:3000/clientes`)
-        .then(res=>{
-            console.log(res);
-            this.setState({cliente:res.data})
-        });
-}
-render (){
-    return(
-        <ul>
-            {this.state.cliente.map(cliente=><li>{cliente.nome}</li>)}
-        </ul>
-    )
-}
+    getClientes();
+  }, []);
+
+  return (
+    <ul>
+      {clientes.map(cliente => (
+        <li>{cliente.nome}</li>
+      ))}
+    </ul>
+  );
 }

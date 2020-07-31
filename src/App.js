@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import { Admin, Resource, ListGuesser } from 'react-admin';
-import ClientesLista from './Components/clienteslista';
-
-
-
+// import { Admin } from 'react-admin';
+import ClientesLista from './Components/ClientesLista'
 
 class App extends Component {
-  render (){
+  render() {
     return (
-      <div classname="App">
+      <div className="App">
         <header></header>
-        <ClientesLista/>
-        <Admin></Admin>
+        <ClientesLista />
+
+        {/* Esse componente Admin precisa de uma prop chamada dataProvider */}
+        {/* <Admin></Admin> */}
+        
       </div>
-    )
+    );
   }
 }
 
